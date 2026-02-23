@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爆速！競馬コース分析アプリ</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f4f7f6; color: #333; }
+        h1 { font-size: 1.5rem; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .controls { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        select { padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc; background-color: white;}
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px;}
+        .features-title { color: #e74c3c; margin-top: 0;}
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background-color: #3498db; color: white; }
+        /* ハイライト用（単回100超えなど） */
+        .highlight { font-weight: bold; color: #e74c3c; background-color: #fadbd8; }
+    </style>
+</head>
+<body>
+
+    <h1>🐎 コース別 枠順分析データ</h1>
+
+    <div class="controls">
+        <select id="placeSelect"><option value="">競馬場を選択</option></select>
+        <select id="surfaceSelect" disabled><option value="">芝/ダート</option></select>
+        <select id="distanceSelect" disabled><option value="">距離を選択</option></select>
+    </div>
+
+    <div id="resultArea" class="card" style="display: none;">
+        <h3 class="features-title">📌 コース特徴・狙い目</h3>
+        <p id="featuresText"></p>
+
+        <h3>📊 枠順別成績 (2021-2025)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>枠順</th>
+                    <th>勝率 (%)</th>
+                    <th>単勝回収率</th>
+                    <th>複勝回収率</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <script src="data.js"></script>
+    
+    <script>
+        const placeSelect = document.getElementById('placeSelect');
+        const surfaceSelect = document.getElementById('surfaceSelect');
+        const distanceSelect = document.getElementById('distanceSelect');
+        const resultArea = document.getElementById('resultArea');
+        const featuresText = document.getElementById('featuresText');
+        const tableBody = document.getElementById('tableBody');
+
+        // 1. 競馬場の選択肢を作る
+        Object.keys(raceData).forEach(place => {
+            let option = document.createElement('option');
+            option.value = place;
+            option.textContent = place;
+            placeSelect.appendChild(option);
+        });
+
+        // 2. 競馬場が選ばれたら、芝/ダートの選択肢を作る
+        placeSelect.addEventListener('change', function() {
+            surfaceSelect.innerHTML = '<option value="">芝/ダート</option>';
+            distanceSelect.innerHTML = '<option value="">距離を選択</option>';
+            surfaceSelect.disabled = true;
+            distanceSelect.disabled = true;
+            resultArea.style.display = 'none';
+
+            if(this.value) {
+                Object.keys(raceData[this.value]).forEach(surface => {
+                    let option = document.createElement('option');
+                    option.value = surface;
+                    option.textContent = surface;
+                    surfaceSelect.appendChild(option);
+                });
+                surfaceSelect.disabled = false;
+            }
+        });
+
+        // 3. 芝/ダートが選ばれたら、距離の選択肢を作る
+        surfaceSelect.addEventListener('change', function() {
+            distanceSelect.innerHTML = '<option value="">距離を選択</option>';
+            distanceSelect.disabled = true;
+            resultArea.style.display = 'none';
+
+            const place = placeSelect.value;
+            if(this.value && place) {
+                Object.keys(raceData[place][this.value]).forEach(distance => {
+                    let option = document.createElement('option');
+                    option.value = distance;
+                    option.textContent = distance;
+                    distanceSelect.appendChild(option);
+                });
+                distanceSelect.disabled = false;
+            }
+        });
+
+        // 4. 距離が選ばれたら、データを表示する
+        distanceSelect.addEventListener('change', function() {
+            const place = placeSelect.value;
+            const surface = surfaceSelect.value;
+            const distance = this.value;
+
+            if(place && surface && distance) {
+                const data = raceData[place][surface][distance];
+                
+                // 特徴テキストを表示
+                featuresText.textContent = data.features || "特徴データはまだ登録されていません。";
+
+                // テーブルをクリアして作成
+                tableBody.innerHTML = '';
+                data.stats.forEach(row => {
+                    let tr = document.createElement('tr');
+                    
+                    // 単勝回収率が100以上の場合はハイライト
+                    let tanClass = row.tan >= 100 ? 'class="highlight"' : '';
+                    let fukuClass = row.fuku >= 100 ? 'class="highlight"' : '';
+
+                    tr.innerHTML = `
+                        <td>${row.bracket}</td>
+                        <td>${row.winRate.toFixed(1)}</td>
+                        <td ${tanClass}>${row.tan}</td>
+                        <td ${fukuClass}>${row.fuku}</td>
+                    `;
+                    tableBody.appendChild(tr);
+                });
+
+                resultArea.style.display = 'block';
+            } else {
+                resultArea.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
