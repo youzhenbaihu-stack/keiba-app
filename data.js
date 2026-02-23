@@ -1,35 +1,993 @@
-// data.js
 const raceData = {
+  // =================================================================
+  // 🟢 中山競馬場 (Nakayama)
+  // =================================================================
   "中山": {
     "芝": {
       "1200m": {
-        "features": "スタートから最初のコーナーまでの距離が短い。外枠の馬はポジショニングがとりづらい上にすぐにコーナーに入るので全体のペースとしても上がりにくい。結果として内枠、先行馬が有利になりやすい。",
+        "features": "内枠有利が顕著なコース。スタート後の下り坂でスピードに乗りやすく、外枠は距離ロスが大きい。1～3枠の勝率・回収率が優秀。",
         "stats": [
           {"bracket": "1枠", "winRate": 10.7, "tan": 99, "fuku": 95},
-          {"bracket": "2枠", "winRate": 8.0,  "tan": 88, "fuku": 86},
-          {"bracket": "3枠", "winRate": 9.8,  "tan": 106,"fuku": 90},
-          {"bracket": "4枠", "winRate": 5.7,  "tan": 63, "fuku": 86},
-          {"bracket": "5枠", "winRate": 7.4,  "tan": 81, "fuku": 74},
-          {"bracket": "6枠", "winRate": 4.4,  "tan": 58, "fuku": 69},
-          {"bracket": "7枠", "winRate": 7.5,  "tan": 78, "fuku": 76},
-          {"bracket": "8枠", "winRate": 3.6,  "tan": 52, "fuku": 64}
+          {"bracket": "2枠", "winRate": 8.0, "tan": 88, "fuku": 86},
+          {"bracket": "3枠", "winRate": 9.8, "tan": 106, "fuku": 90},
+          {"bracket": "4枠", "winRate": 5.7, "tan": 63, "fuku": 86},
+          {"bracket": "5枠", "winRate": 7.4, "tan": 81, "fuku": 74},
+          {"bracket": "6枠", "winRate": 4.4, "tan": 58, "fuku": 69},
+          {"bracket": "7枠", "winRate": 7.5, "tan": 78, "fuku": 76},
+          {"bracket": "8枠", "winRate": 3.6, "tan": 52, "fuku": 64}
+        ]
+      },
+      "1600m": {
+        "features": "おむすび型の変則コース。1枠の勝率・回収率が高く、内枠有利の傾向がある。外枠（特に8枠）は割引が必要。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 9.2, "tan": 97, "fuku": 96},
+          {"bracket": "2枠", "winRate": 8.3, "tan": 90, "fuku": 78},
+          {"bracket": "3枠", "winRate": 9.1, "tan": 92, "fuku": 79},
+          {"bracket": "4枠", "winRate": 9.6, "tan": 88, "fuku": 82},
+          {"bracket": "5枠", "winRate": 7.4, "tan": 78, "fuku": 78},
+          {"bracket": "6枠", "winRate": 5.1, "tan": 63, "fuku": 77},
+          {"bracket": "7枠", "winRate": 4.5, "tan": 59, "fuku": 76},
+          {"bracket": "8枠", "winRate": 4.4, "tan": 61, "fuku": 82}
+        ]
+      },
+      "1800m": {
+        "features": "スタートから最初のコーナーまでの距離が短い。外枠の馬はポジショニングがとりづらい上にすぐにコーナーに入るので全体のペースとしても上がりにくい。結果として内枠、先行馬が有利になりやすい。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.9, "tan": 70, "fuku": 88},
+          {"bracket": "2枠", "winRate": 7.5, "tan": 78, "fuku": 87},
+          {"bracket": "3枠", "winRate": 6.6, "tan": 74, "fuku": 87},
+          {"bracket": "4枠", "winRate": 8.3, "tan": 75, "fuku": 82},
+          {"bracket": "5枠", "winRate": 5.6, "tan": 62, "fuku": 68},
+          {"bracket": "6枠", "winRate": 7.3, "tan": 85, "fuku": 80},
+          {"bracket": "7枠", "winRate": 9.1, "tan": 93, "fuku": 84},
+          {"bracket": "8枠", "winRate": 7.4, "tan": 86, "fuku": 75}
+        ]
+      },
+      "2000m": {
+        "features": "1コーナーまでの距離があり、枠順の有利不利は比較的少ないが、6枠の回収率が優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.9, "tan": 70, "fuku": 80},
+          {"bracket": "2枠", "winRate": 7.9, "tan": 87, "fuku": 77},
+          {"bracket": "3枠", "winRate": 5.8, "tan": 67, "fuku": 79},
+          {"bracket": "4枠", "winRate": 7.6, "tan": 82, "fuku": 77},
+          {"bracket": "5枠", "winRate": 6.9, "tan": 79, "fuku": 85},
+          {"bracket": "6枠", "winRate": 8.4, "tan": 96, "fuku": 94},
+          {"bracket": "7枠", "winRate": 6.8, "tan": 75, "fuku": 85},
+          {"bracket": "8枠", "winRate": 6.5, "tan": 75, "fuku": 75}
+        ]
+      },
+      "2200m": {
+        "features": "外回りコース使用。スタートから1コーナーまで432mで、序盤は緩カーブ続きでペースが落ちにくい。持続力（スタミナ＋底力）が問われ、コース実績馬のリピート好走が多い。後方一気は厳しく、好位から持続的な脚を使える馬が狙い目。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 10.7, "tan": 104, "fuku": 95},
+          {"bracket": "2枠", "winRate": 6.9, "tan": 84, "fuku": 81},
+          {"bracket": "3枠", "winRate": 6.5, "tan": 75, "fuku": 73},
+          {"bracket": "4枠", "winRate": 7.6, "tan": 73, "fuku": 82},
+          {"bracket": "5枠", "winRate": 7.3, "tan": 81, "fuku": 79},
+          {"bracket": "6枠", "winRate": 3.8, "tan": 35, "fuku": 60},
+          {"bracket": "7枠", "winRate": 8.0, "tan": 97, "fuku": 88},
+          {"bracket": "8枠", "winRate": 6.5, "tan": 89, "fuku": 98}
+        ]
+      },
+      "2500m": {
+        "features": "有馬記念の舞台。コーナーを6回回るため、ロスのない内枠（特に5枠・6枠の勝率が高い）や立ち回りの上手さが重要。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.2, "tan": 59, "fuku": 70},
+          {"bracket": "2枠", "winRate": 8.1, "tan": 82, "fuku": 101},
+          {"bracket": "3枠", "winRate": 7.2, "tan": 77, "fuku": 81},
+          {"bracket": "4枠", "winRate": 5.6, "tan": 44, "fuku": 76},
+          {"bracket": "5枠", "winRate": 13.6, "tan": 123, "fuku": 118},
+          {"bracket": "6枠", "winRate": 11.4, "tan": 110, "fuku": 94},
+          {"bracket": "7枠", "winRate": 8.6, "tan": 68, "fuku": 62},
+          {"bracket": "8枠", "winRate": 5.3, "tan": 72, "fuku": 76}
+        ]
+      }
+    },
+    "ダート": {
+      "1200m": {
+        "features": "芝スタートで外枠の芝部分が長い。「芝を長く走れる外枠」が有利な傾向。6枠の勝率・回収率が優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.6, "tan": 84, "fuku": 80},
+          {"bracket": "2枠", "winRate": 5.0, "tan": 66, "fuku": 77},
+          {"bracket": "3枠", "winRate": 4.6, "tan": 60, "fuku": 77},
+          {"bracket": "4枠", "winRate": 6.2, "tan": 78, "fuku": 84},
+          {"bracket": "5枠", "winRate": 6.8, "tan": 83, "fuku": 83},
+          {"bracket": "6枠", "winRate": 8.3, "tan": 98, "fuku": 85},
+          {"bracket": "7枠", "winRate": 7.1, "tan": 79, "fuku": 86},
+          {"bracket": "8枠", "winRate": 7.7, "tan": 79, "fuku": 80}
+        ]
+      },
+      "1800m": {
+        "features": "スタート直後に急坂があり、そもそもペースが速くならないことが多い。6～8枠＋前走4角5番手以内の馬は、単勝回収率100%超え（激アツ条件）。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.5, "tan": 69, "fuku": 71},
+          {"bracket": "2枠", "winRate": 7.4, "tan": 96, "fuku": 87},
+          {"bracket": "3枠", "winRate": 4.5, "tan": 58, "fuku": 71},
+          {"bracket": "4枠", "winRate": 7.1, "tan": 82, "fuku": 84},
+          {"bracket": "5枠", "winRate": 6.0, "tan": 68, "fuku": 83},
+          {"bracket": "6枠", "winRate": 7.6, "tan": 82, "fuku": 83},
+          {"bracket": "7枠", "winRate": 7.4, "tan": 79, "fuku": 85},
+          {"bracket": "8枠", "winRate": 9.1, "tan": 91, "fuku": 88}
+        ]
+      },
+      "2400m": {
+        "features": "1枠の勝率・単回収率が突出して高い（単回146）。内枠で脚を溜められる馬が狙い目。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 10.4, "tan": 146, "fuku": 102},
+          {"bracket": "2枠", "winRate": 1.4, "tan": 19, "fuku": 39},
+          {"bracket": "3枠", "winRate": 5.4, "tan": 72, "fuku": 100},
+          {"bracket": "4枠", "winRate": 1.3, "tan": 14, "fuku": 70},
+          {"bracket": "5枠", "winRate": 8.6, "tan": 99, "fuku": 81},
+          {"bracket": "6枠", "winRate": 5.8, "tan": 61, "fuku": 87},
+          {"bracket": "7枠", "winRate": 10.2, "tan": 110, "fuku": 89},
+          {"bracket": "8枠", "winRate": 12.4, "tan": 102, "fuku": 78}
         ]
       }
     }
   },
+
+  // =================================================================
+  // 🗼 東京競馬場 (Tokyo)
+  // =================================================================
+  "東京": {
+    "芝": {
+      "1400m": {
+        "features": "6枠の単回収率が102と優秀。短距離だが差しも決まりやすい。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.8, "tan": 63, "fuku": 69},
+          {"bracket": "2枠", "winRate": 4.3, "tan": 64, "fuku": 74},
+          {"bracket": "3枠", "winRate": 6.6, "tan": 80, "fuku": 73},
+          {"bracket": "4枠", "winRate": 5.3, "tan": 60, "fuku": 79},
+          {"bracket": "5枠", "winRate": 8.4, "tan": 87, "fuku": 84},
+          {"bracket": "6枠", "winRate": 9.0, "tan": 102, "fuku": 85},
+          {"bracket": "7枠", "winRate": 6.6, "tan": 84, "fuku": 83},
+          {"bracket": "8枠", "winRate": 7.8, "tan": 92, "fuku": 95}
+        ]
+      },
+      "1600m": {
+        "features": "「スタミナ重要・距離短縮馬◎」。3コーナーの登り坂でペース緩む＋長い直線意識しスローになりがち。キレ武器の中距離馬や距離短縮組に注意。ただし、馬場コンディションによっては異常な差し有利になる場合もある。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 10.1, "tan": 110, "fuku": 90},
+          {"bracket": "2枠", "winRate": 5.8, "tan": 66, "fuku": 88},
+          {"bracket": "3枠", "winRate": 5.9, "tan": 59, "fuku": 76},
+          {"bracket": "4枠", "winRate": 6.8, "tan": 71, "fuku": 75},
+          {"bracket": "5枠", "winRate": 7.2, "tan": 76, "fuku": 78},
+          {"bracket": "6枠", "winRate": 6.5, "tan": 72, "fuku": 90},
+          {"bracket": "7枠", "winRate": 9.2, "tan": 105, "fuku": 87},
+          {"bracket": "8枠", "winRate": 7.2, "tan": 80, "fuku": 87}
+        ]
+      },
+      "1800m": {
+        "features": "4枠が勝率11.1%、単回110と非常に優秀なホットスポット。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.7, "tan": 56, "fuku": 85},
+          {"bracket": "2枠", "winRate": 8.2, "tan": 79, "fuku": 80},
+          {"bracket": "3枠", "winRate": 7.4, "tan": 84, "fuku": 84},
+          {"bracket": "4枠", "winRate": 11.1, "tan": 110, "fuku": 90},
+          {"bracket": "5枠", "winRate": 7.2, "tan": 66, "fuku": 86},
+          {"bracket": "6枠", "winRate": 6.8, "tan": 70, "fuku": 77},
+          {"bracket": "7枠", "winRate": 8.1, "tan": 76, "fuku": 87},
+          {"bracket": "8枠", "winRate": 7.7, "tan": 89, "fuku": 84}
+        ]
+      },
+      "2000m": {
+        "features": "天皇賞(秋)の舞台。1枠の勝率が高く、3枠の単回収率も優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 11.2, "tan": 88, "fuku": 81},
+          {"bracket": "2枠", "winRate": 7.8, "tan": 71, "fuku": 86},
+          {"bracket": "3枠", "winRate": 9.4, "tan": 98, "fuku": 82},
+          {"bracket": "4枠", "winRate": 8.5, "tan": 78, "fuku": 76},
+          {"bracket": "5枠", "winRate": 8.9, "tan": 71, "fuku": 96},
+          {"bracket": "6枠", "winRate": 7.7, "tan": 73, "fuku": 79},
+          {"bracket": "7枠", "winRate": 7.8, "tan": 81, "fuku": 78},
+          {"bracket": "8枠", "winRate": 8.4, "tan": 74, "fuku": 84}
+        ]
+      },
+      "2400m": {
+        "features": "ダービー・ジャパンCの舞台。6枠の勝率・回収率が安定している。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 10.8, "tan": 85, "fuku": 83},
+          {"bracket": "2枠", "winRate": 4.2, "tan": 51, "fuku": 67},
+          {"bracket": "3枠", "winRate": 8.5, "tan": 84, "fuku": 88},
+          {"bracket": "4枠", "winRate": 7.3, "tan": 75, "fuku": 90},
+          {"bracket": "5枠", "winRate": 9.0, "tan": 86, "fuku": 82},
+          {"bracket": "6枠", "winRate": 10.3, "tan": 97, "fuku": 84},
+          {"bracket": "7枠", "winRate": 7.1, "tan": 68, "fuku": 79},
+          {"bracket": "8枠", "winRate": 8.3, "tan": 74, "fuku": 88}
+        ]
+      }
+    },
+    "ダート": {
+      "1300m": {
+        "features": "1枠の単回収率94とまずまず。短距離戦。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.0, "tan": 94, "fuku": 89},
+          {"bracket": "2枠", "winRate": 7.4, "tan": 79, "fuku": 89},
+          {"bracket": "3枠", "winRate": 6.8, "tan": 85, "fuku": 70},
+          {"bracket": "4枠", "winRate": 5.3, "tan": 70, "fuku": 60},
+          {"bracket": "5枠", "winRate": 5.7, "tan": 75, "fuku": 89},
+          {"bracket": "6枠", "winRate": 7.4, "tan": 83, "fuku": 93},
+          {"bracket": "7枠", "winRate": 4.8, "tan": 62, "fuku": 85},
+          {"bracket": "8枠", "winRate": 7.4, "tan": 87, "fuku": 80}
+        ]
+      },
+      "1400m": {
+        "features": "直線が長く、スタートから最初のコーナーまで400m以上あるため、末脚のある差し馬も届きやすい。ペースが流れれば差し馬の台頭が目立つ。上がり3Fの速さが勝敗の鍵。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.2, "tan": 89, "fuku": 80},
+          {"bracket": "2枠", "winRate": 6.3, "tan": 85, "fuku": 87},
+          {"bracket": "3枠", "winRate": 5.7, "tan": 77, "fuku": 77},
+          {"bracket": "4枠", "winRate": 7.3, "tan": 84, "fuku": 82},
+          {"bracket": "5枠", "winRate": 5.4, "tan": 66, "fuku": 77},
+          {"bracket": "6枠", "winRate": 6.8, "tan": 79, "fuku": 82},
+          {"bracket": "7枠", "winRate": 7.8, "tan": 82, "fuku": 84},
+          {"bracket": "8枠", "winRate": 6.1, "tan": 70, "fuku": 79}
+        ]
+      },
+      "1600m": {
+        "features": "距離と枠がポイントになりやすいコース。芝スタート部分をロスなく走れる外枠（7・8枠）が優秀。スピードだけで押し切るのは難しく、「マイルは少し短いかも」というタイプの馬がスタミナを活かしやすい。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.0, "tan": 69, "fuku": 76},
+          {"bracket": "2枠", "winRate": 6.3, "tan": 79, "fuku": 76},
+          {"bracket": "3枠", "winRate": 6.1, "tan": 81, "fuku": 77},
+          {"bracket": "4枠", "winRate": 5.3, "tan": 69, "fuku": 75},
+          {"bracket": "5枠", "winRate": 7.2, "tan": 77, "fuku": 84},
+          {"bracket": "6枠", "winRate": 7.7, "tan": 80, "fuku": 85},
+          {"bracket": "7枠", "winRate": 7.7, "tan": 88, "fuku": 84},
+          {"bracket": "8枠", "winRate": 8.4, "tan": 86, "fuku": 93}
+        ]
+      },
+      "2100m": {
+        "features": "3枠の勝率が9.1%と高く、回収率も95と優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.7, "tan": 79, "fuku": 77},
+          {"bracket": "2枠", "winRate": 5.8, "tan": 73, "fuku": 83},
+          {"bracket": "3枠", "winRate": 9.1, "tan": 95, "fuku": 92},
+          {"bracket": "4枠", "winRate": 6.1, "tan": 70, "fuku": 85},
+          {"bracket": "5枠", "winRate": 7.6, "tan": 84, "fuku": 76},
+          {"bracket": "6枠", "winRate": 7.9, "tan": 86, "fuku": 88},
+          {"bracket": "7枠", "winRate": 5.9, "tan": 65, "fuku": 69},
+          {"bracket": "8枠", "winRate": 6.4, "tan": 88, "fuku": 86}
+        ]
+      }
+    }
+  },
+
+  // =================================================================
+  // ⛩️ 京都競馬場 (Kyoto)
+  // =================================================================
   "京都": {
+    "芝": {
+      "1200m": {
+        "features": "「内前・先行断然有利」。最初のコーナーまでの距離が短い＋3角が上り坂＋直線平坦。ペースが上がりにくく、内前有利が顕著。【激アツ条件】1・2枠の前走4角3番手以内（単回収率191%！）。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.6, "tan": 59, "fuku": 77},
+          {"bracket": "2枠", "winRate": 8.4, "tan": 110, "fuku": 103},
+          {"bracket": "3枠", "winRate": 6.2, "tan": 60, "fuku": 70},
+          {"bracket": "4枠", "winRate": 6.5, "tan": 99, "fuku": 75},
+          {"bracket": "5枠", "winRate": 5.5, "tan": 64, "fuku": 86},
+          {"bracket": "6枠", "winRate": 7.6, "tan": 81, "fuku": 67},
+          {"bracket": "7枠", "winRate": 8.8, "tan": 99, "fuku": 100},
+          {"bracket": "8枠", "winRate": 5.6, "tan": 70, "fuku": 72}
+        ]
+      },
+      "1400m内": {
+        "features": "内回り。「差し有利の舞台」。芝1200mよりスタートが200m後ろになり、差し馬＆距離短縮組が有利になりやすい。1枠の単回収率150%は驚異的。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.8, "tan": 150, "fuku": 106},
+          {"bracket": "2枠", "winRate": 3.4, "tan": 50, "fuku": 87},
+          {"bracket": "3枠", "winRate": 13.3, "tan": 99, "fuku": 98},
+          {"bracket": "4枠", "winRate": 1.6, "tan": 17, "fuku": 71},
+          {"bracket": "5枠", "winRate": 7.4, "tan": 109, "fuku": 96},
+          {"bracket": "6枠", "winRate": 4.3, "tan": 60, "fuku": 60},
+          {"bracket": "7枠", "winRate": 11.6, "tan": 126, "fuku": 65},
+          {"bracket": "8枠", "winRate": 2.2, "tan": 34, "fuku": 64}
+        ]
+      },
+      "1400m外": {
+        "features": "外回り。「追走力必要なく距離短縮有利」。3コーナーの上り坂でペース緩む＋長い直線意識しスローになる。上がり最速を使える瞬発力型が強い舞台。外枠（8枠）の回収率が良い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.2, "tan": 63, "fuku": 83},
+          {"bracket": "2枠", "winRate": 5.9, "tan": 55, "fuku": 52},
+          {"bracket": "3枠", "winRate": 6.5, "tan": 67, "fuku": 94},
+          {"bracket": "4枠", "winRate": 9.6, "tan": 105, "fuku": 72},
+          {"bracket": "5枠", "winRate": 5.9, "tan": 70, "fuku": 72},
+          {"bracket": "6枠", "winRate": 7.2, "tan": 67, "fuku": 86},
+          {"bracket": "7枠", "winRate": 9.2, "tan": 106, "fuku": 103},
+          {"bracket": "8枠", "winRate": 7.8, "tan": 89, "fuku": 71}
+        ]
+      },
+      "1600m内": {
+        "features": "4枠の勝率・回収率が高い（勝率9.9%、単回107）。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.6, "tan": 57, "fuku": 67},
+          {"bracket": "2枠", "winRate": 4.6, "tan": 58, "fuku": 64},
+          {"bracket": "3枠", "winRate": 6.2, "tan": 73, "fuku": 86},
+          {"bracket": "4枠", "winRate": 9.9, "tan": 107, "fuku": 95},
+          {"bracket": "5枠", "winRate": 5.7, "tan": 66, "fuku": 70},
+          {"bracket": "6枠", "winRate": 9.8, "tan": 90, "fuku": 76},
+          {"bracket": "7枠", "winRate": 8.2, "tan": 80, "fuku": 79},
+          {"bracket": "8枠", "winRate": 7.5, "tan": 88, "fuku": 112}
+        ]
+      },
+      "1600m外": {
+        "features": "「距離短縮＆差し馬が狙い目」。8枠の勝率11.4%、単回収率117と大外が有利。上がり最速馬の成績が圧倒的（複勝率約60%）。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.6, "tan": 89, "fuku": 92},
+          {"bracket": "2枠", "winRate": 5.2, "tan": 47, "fuku": 71},
+          {"bracket": "3枠", "winRate": 1.0, "tan": 13, "fuku": 70},
+          {"bracket": "4枠", "winRate": 10.3, "tan": 89, "fuku": 85},
+          {"bracket": "5枠", "winRate": 7.8, "tan": 74, "fuku": 68},
+          {"bracket": "6枠", "winRate": 7.4, "tan": 87, "fuku": 77},
+          {"bracket": "7枠", "winRate": 8.7, "tan": 85, "fuku": 75},
+          {"bracket": "8枠", "winRate": 11.4, "tan": 117, "fuku": 104}
+        ]
+      },
+      "1800m": {
+        "features": "5枠・6枠の勝率が高く、単回収率も100超え。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 4.7, "tan": 42, "fuku": 75},
+          {"bracket": "2枠", "winRate": 9.8, "tan": 91, "fuku": 97},
+          {"bracket": "3枠", "winRate": 7.4, "tan": 63, "fuku": 80},
+          {"bracket": "4枠", "winRate": 7.7, "tan": 66, "fuku": 78},
+          {"bracket": "5枠", "winRate": 13.4, "tan": 102, "fuku": 93},
+          {"bracket": "6枠", "winRate": 9.9, "tan": 104, "fuku": 77},
+          {"bracket": "7枠", "winRate": 7.3, "tan": 74, "fuku": 70},
+          {"bracket": "8枠", "winRate": 8.6, "tan": 81, "fuku": 93}
+        ]
+      },
+      "2000m": {
+        "features": "「基本は内前も、秋華賞は差し有利」。初角までの距離短く、ペースが上がりにくいので基本は内前有利。4枠が勝率13.7%、単回122と優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.7, "tan": 69, "fuku": 82},
+          {"bracket": "2枠", "winRate": 8.7, "tan": 74, "fuku": 76},
+          {"bracket": "3枠", "winRate": 8.2, "tan": 56, "fuku": 81},
+          {"bracket": "4枠", "winRate": 13.7, "tan": 122, "fuku": 90},
+          {"bracket": "5枠", "winRate": 8.2, "tan": 77, "fuku": 85},
+          {"bracket": "6枠", "winRate": 6.2, "tan": 61, "fuku": 69},
+          {"bracket": "7枠", "winRate": 11.2, "tan": 106, "fuku": 97},
+          {"bracket": "8枠", "winRate": 7.7, "tan": 68, "fuku": 80}
+        ]
+      },
+      "2200m": {
+        "features": "「タフなコースで距離短縮組有利」。長い距離＋3・4角の下りから早めスパートでスタミナの要求値上がる。8枠の回収率が高い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 10.9, "tan": 85, "fuku": 98},
+          {"bracket": "2枠", "winRate": 8.3, "tan": 75, "fuku": 75},
+          {"bracket": "3枠", "winRate": 11.5, "tan": 118, "fuku": 107},
+          {"bracket": "4枠", "winRate": 4.7, "tan": 37, "fuku": 65},
+          {"bracket": "5枠", "winRate": 6.8, "tan": 61, "fuku": 78},
+          {"bracket": "6枠", "winRate": 6.6, "tan": 72, "fuku": 81},
+          {"bracket": "7枠", "winRate": 7.2, "tan": 68, "fuku": 61},
+          {"bracket": "8枠", "winRate": 11.6, "tan": 126, "fuku": 84}
+        ]
+      },
+      "2400m": {
+        "features": "「能力のある馬を信頼すべき」。スロー→瞬発力勝負になりやすく、紛れが少ない。4枠の勝率・回収率が優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 10.6, "tan": 112, "fuku": 70},
+          {"bracket": "2枠", "winRate": 8.2, "tan": 51, "fuku": 92},
+          {"bracket": "3枠", "winRate": 7.3, "tan": 73, "fuku": 74},
+          {"bracket": "4枠", "winRate": 13.8, "tan": 110, "fuku": 103},
+          {"bracket": "5枠", "winRate": 9.5, "tan": 88, "fuku": 91},
+          {"bracket": "6枠", "winRate": 3.0, "tan": 34, "fuku": 55},
+          {"bracket": "7枠", "winRate": 9.7, "tan": 93, "fuku": 90},
+          {"bracket": "8枠", "winRate": 6.8, "tan": 70, "fuku": 77}
+        ]
+      },
+      "3000m": {
+        "features": "「中距離馬でも好走可能な長距離戦」。スタート後の3角の上り坂でペース緩む＆直線平坦。スタミナ要求値は意外と低く、コーナーを6回通過するので基本は内枠有利。",
+        "stats": [] 
+      }
+    },
     "ダート": {
       "1200m": {
-        "features": "日本屈指の逃げ・先行有利コース。スタート後の3角の上り坂でペース緩む＋下り坂＋直線平坦。",
+        "features": "「日本屈指の逃げ・先行有利コース」。スタート後の3角の上り坂でペース緩む＋下り坂＋直線平坦。7枠の勝率・回収率が優秀。",
         "stats": [
-          {"bracket": "1枠", "winRate": 6.7,  "tan": 75, "fuku": 74},
-          {"bracket": "2枠", "winRate": 4.0,  "tan": 47, "fuku": 84},
-          {"bracket": "3枠", "winRate": 7.2,  "tan": 96, "fuku": 70},
-          {"bracket": "4枠", "winRate": 4.3,  "tan": 61, "fuku": 73},
-          {"bracket": "5枠", "winRate": 3.8,  "tan": 45, "fuku": 65},
-          {"bracket": "6枠", "winRate": 7.8,  "tan": 89, "fuku": 87},
-          {"bracket": "7枠", "winRate": 11.1, "tan": 121,"fuku": 96},
-          {"bracket": "8枠", "winRate": 9.0,  "tan": 91, "fuku": 99}
+          {"bracket": "1枠", "winRate": 6.7, "tan": 75, "fuku": 74},
+          {"bracket": "2枠", "winRate": 4.0, "tan": 47, "fuku": 84},
+          {"bracket": "3枠", "winRate": 7.2, "tan": 96, "fuku": 70},
+          {"bracket": "4枠", "winRate": 4.3, "tan": 61, "fuku": 73},
+          {"bracket": "5枠", "winRate": 3.8, "tan": 45, "fuku": 65},
+          {"bracket": "6枠", "winRate": 7.8, "tan": 89, "fuku": 87},
+          {"bracket": "7枠", "winRate": 11.1, "tan": 121, "fuku": 96},
+          {"bracket": "8枠", "winRate": 9.0, "tan": 91, "fuku": 99}
+        ]
+      },
+      "1400m": {
+        "features": "「芝スタートで外枠有利」。芝部分を長く走れる外枠が有利。5枠の回収率が比較的良い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.6, "tan": 81, "fuku": 89},
+          {"bracket": "2枠", "winRate": 6.2, "tan": 75, "fuku": 83},
+          {"bracket": "3枠", "winRate": 5.3, "tan": 70, "fuku": 73},
+          {"bracket": "4枠", "winRate": 7.2, "tan": 77, "fuku": 88},
+          {"bracket": "5枠", "winRate": 8.2, "tan": 88, "fuku": 78},
+          {"bracket": "6枠", "winRate": 6.0, "tan": 67, "fuku": 76},
+          {"bracket": "7枠", "winRate": 8.2, "tan": 89, "fuku": 80},
+          {"bracket": "8枠", "winRate": 7.4, "tan": 79, "fuku": 87}
+        ]
+      },
+      "1800m": {
+        "features": "「ダートでは珍しい内枠有利コース」。初角までが短い＋1,2角が急カーブ。外枠がポジション取れず内枠有利になりやすい。6枠の単回収率101も優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.1, "tan": 63, "fuku": 75},
+          {"bracket": "2枠", "winRate": 7.3, "tan": 72, "fuku": 86},
+          {"bracket": "3枠", "winRate": 6.1, "tan": 66, "fuku": 83},
+          {"bracket": "4枠", "winRate": 7.0, "tan": 82, "fuku": 84},
+          {"bracket": "5枠", "winRate": 9.0, "tan": 84, "fuku": 78},
+          {"bracket": "6枠", "winRate": 9.6, "tan": 101, "fuku": 84},
+          {"bracket": "7枠", "winRate": 6.9, "tan": 76, "fuku": 82},
+          {"bracket": "8枠", "winRate": 9.1, "tan": 81, "fuku": 79}
+        ]
+      },
+      "1900m": {
+        "features": "「内枠の差し馬を狙え」。1枠は単複共に100%超えと成績抜群。初角までの距離伸びてペースUP→差し有利。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.4, "tan": 115, "fuku": 113},
+          {"bracket": "2枠", "winRate": 10.1, "tan": 105, "fuku": 82},
+          {"bracket": "3枠", "winRate": 4.3, "tan": 46, "fuku": 77},
+          {"bracket": "4枠", "winRate": 8.3, "tan": 85, "fuku": 80},
+          {"bracket": "5枠", "winRate": 8.2, "tan": 82, "fuku": 80},
+          {"bracket": "6枠", "winRate": 7.0, "tan": 95, "fuku": 89},
+          {"bracket": "7枠", "winRate": 8.8, "tan": 93, "fuku": 73},
+          {"bracket": "8枠", "winRate": 5.9, "tan": 70, "fuku": 80}
+        ]
+      }
+    }
+  },
+
+  // =================================================================
+  // 🐯 阪神競馬場 (Hanshin)
+  // =================================================================
+  "阪神": {
+    "芝": {
+      "1200m": {
+        "features": "2枠・3枠の勝率・回収率が高い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.0, "tan": 62, "fuku": 72},
+          {"bracket": "2枠", "winRate": 10.7, "tan": 97, "fuku": 82},
+          {"bracket": "3枠", "winRate": 10.9, "tan": 100, "fuku": 106},
+          {"bracket": "4枠", "winRate": 6.9, "tan": 74, "fuku": 83},
+          {"bracket": "5枠", "winRate": 6.7, "tan": 65, "fuku": 85},
+          {"bracket": "6枠", "winRate": 6.2, "tan": 80, "fuku": 79},
+          {"bracket": "7枠", "winRate": 9.5, "tan": 92, "fuku": 87},
+          {"bracket": "8枠", "winRate": 5.2, "tan": 64, "fuku": 43}
+        ]
+      },
+      "1400m": {
+        "features": "6枠の単勝回収率105が光る。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.4, "tan": 55, "fuku": 91},
+          {"bracket": "2枠", "winRate": 9.5, "tan": 101, "fuku": 94},
+          {"bracket": "3枠", "winRate": 10.6, "tan": 101, "fuku": 83},
+          {"bracket": "4枠", "winRate": 7.2, "tan": 76, "fuku": 77},
+          {"bracket": "5枠", "winRate": 7.1, "tan": 78, "fuku": 81},
+          {"bracket": "6枠", "winRate": 8.8, "tan": 105, "fuku": 86},
+          {"bracket": "7枠", "winRate": 6.1, "tan": 71, "fuku": 74},
+          {"bracket": "8枠", "winRate": 3.9, "tan": 48, "fuku": 64}
+        ]
+      },
+      "1600m": {
+        "features": "4枠の単勝回収率101と安定。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 4.5, "tan": 51, "fuku": 98},
+          {"bracket": "2枠", "winRate": 9.4, "tan": 94, "fuku": 90},
+          {"bracket": "3枠", "winRate": 8.3, "tan": 83, "fuku": 82},
+          {"bracket": "4枠", "winRate": 9.4, "tan": 101, "fuku": 80},
+          {"bracket": "5枠", "winRate": 8.7, "tan": 97, "fuku": 81},
+          {"bracket": "6枠", "winRate": 6.8, "tan": 78, "fuku": 86},
+          {"bracket": "7枠", "winRate": 6.2, "tan": 66, "fuku": 80},
+          {"bracket": "8枠", "winRate": 6.5, "tan": 68, "fuku": 65}
+        ]
+      },
+      "1800m": {
+        "features": "6枠の単勝回収率100が優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.0, "tan": 62, "fuku": 85},
+          {"bracket": "2枠", "winRate": 7.9, "tan": 79, "fuku": 77},
+          {"bracket": "3枠", "winRate": 9.5, "tan": 84, "fuku": 89},
+          {"bracket": "4枠", "winRate": 10.4, "tan": 83, "fuku": 81},
+          {"bracket": "5枠", "winRate": 6.5, "tan": 61, "fuku": 76},
+          {"bracket": "6枠", "winRate": 10.3, "tan": 100, "fuku": 91},
+          {"bracket": "7枠", "winRate": 7.5, "tan": 78, "fuku": 76},
+          {"bracket": "8枠", "winRate": 8.6, "tan": 87, "fuku": 83}
+        ]
+      },
+      "2000m": {
+        "features": "最初のコーナーまでの距離が短く、ペースが上がりにくい。内前有利になりやすい。1枠の単回収率104。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 12.4, "tan": 104, "fuku": 88},
+          {"bracket": "2枠", "winRate": 8.0, "tan": 72, "fuku": 77},
+          {"bracket": "3枠", "winRate": 6.7, "tan": 62, "fuku": 72},
+          {"bracket": "4枠", "winRate": 9.2, "tan": 90, "fuku": 91},
+          {"bracket": "5枠", "winRate": 7.7, "tan": 63, "fuku": 82},
+          {"bracket": "6枠", "winRate": 7.8, "tan": 72, "fuku": 72},
+          {"bracket": "7枠", "winRate": 7.5, "tan": 80, "fuku": 88},
+          {"bracket": "8枠", "winRate": 11.6, "tan": 97, "fuku": 81}
+        ]
+      },
+      "2200m": {
+        "features": "最初のコーナーまでの距離が長く、ペースが上がりやすく差し有利。1枠の勝率0%は衝撃的なデータ。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 0.0, "tan": 0, "fuku": 78},
+          {"bracket": "2枠", "winRate": 9.9, "tan": 87, "fuku": 89},
+          {"bracket": "3枠", "winRate": 12.0, "tan": 90, "fuku": 90},
+          {"bracket": "4枠", "winRate": 9.9, "tan": 86, "fuku": 75},
+          {"bracket": "5枠", "winRate": 10.1, "tan": 97, "fuku": 60},
+          {"bracket": "6枠", "winRate": 9.6, "tan": 92, "fuku": 69},
+          {"bracket": "7枠", "winRate": 3.8, "tan": 49, "fuku": 91},
+          {"bracket": "8枠", "winRate": 9.3, "tan": 108, "fuku": 81}
+        ]
+      },
+      "2400m": {
+        "features": "1枠の勝率15.5%、単回収率126と圧倒的に強い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 15.5, "tan": 126, "fuku": 81},
+          {"bracket": "2枠", "winRate": 12.6, "tan": 85, "fuku": 82},
+          {"bracket": "3枠", "winRate": 12.1, "tan": 85, "fuku": 92},
+          {"bracket": "4枠", "winRate": 9.4, "tan": 75, "fuku": 102},
+          {"bracket": "5枠", "winRate": 2.8, "tan": 34, "fuku": 54},
+          {"bracket": "6枠", "winRate": 9.0, "tan": 72, "fuku": 88},
+          {"bracket": "7枠", "winRate": 8.9, "tan": 72, "fuku": 96},
+          {"bracket": "8枠", "winRate": 8.9, "tan": 84, "fuku": 73}
+        ]
+      }
+    },
+    "ダート": {
+      "1200m": {
+        "features": "8枠の勝率が高く、外枠有利。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 4.3, "tan": 58, "fuku": 75},
+          {"bracket": "2枠", "winRate": 6.1, "tan": 71, "fuku": 78},
+          {"bracket": "3枠", "winRate": 6.9, "tan": 78, "fuku": 76},
+          {"bracket": "4枠", "winRate": 7.5, "tan": 87, "fuku": 86},
+          {"bracket": "5枠", "winRate": 5.9, "tan": 70, "fuku": 85},
+          {"bracket": "6枠", "winRate": 6.8, "tan": 76, "fuku": 76},
+          {"bracket": "7枠", "winRate": 7.1, "tan": 82, "fuku": 85},
+          {"bracket": "8枠", "winRate": 9.5, "tan": 95, "fuku": 86}
+        ]
+      },
+      "1400m": {
+        "features": "8枠の勝率9.4%、単回収率98と優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.1, "tan": 79, "fuku": 65},
+          {"bracket": "2枠", "winRate": 5.7, "tan": 72, "fuku": 79},
+          {"bracket": "3枠", "winRate": 6.1, "tan": 72, "fuku": 77},
+          {"bracket": "4枠", "winRate": 8.0, "tan": 90, "fuku": 77},
+          {"bracket": "5枠", "winRate": 6.1, "tan": 66, "fuku": 83},
+          {"bracket": "6枠", "winRate": 6.4, "tan": 81, "fuku": 87},
+          {"bracket": "7枠", "winRate": 6.1, "tan": 66, "fuku": 85},
+          {"bracket": "8枠", "winRate": 9.4, "tan": 98, "fuku": 91}
+        ]
+      },
+      "1800m": {
+        "features": "5枠・6枠の中枠が好成績。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.3, "tan": 81, "fuku": 79},
+          {"bracket": "2枠", "winRate": 6.3, "tan": 70, "fuku": 76},
+          {"bracket": "3枠", "winRate": 7.2, "tan": 68, "fuku": 81},
+          {"bracket": "4枠", "winRate": 9.0, "tan": 88, "fuku": 82},
+          {"bracket": "5枠", "winRate": 8.9, "tan": 91, "fuku": 91},
+          {"bracket": "6枠", "winRate": 8.6, "tan": 84, "fuku": 92},
+          {"bracket": "7枠", "winRate": 7.8, "tan": 73, "fuku": 82},
+          {"bracket": "8枠", "winRate": 8.2, "tan": 76, "fuku": 82}
+        ]
+      },
+      "2000m": {
+        "features": "6枠が勝率11.6%、単回118と突出して優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 9.7, "tan": 80, "fuku": 73},
+          {"bracket": "2枠", "winRate": 8.5, "tan": 97, "fuku": 82},
+          {"bracket": "3枠", "winRate": 5.6, "tan": 52, "fuku": 67},
+          {"bracket": "4枠", "winRate": 6.8, "tan": 70, "fuku": 84},
+          {"bracket": "5枠", "winRate": 5.0, "tan": 51, "fuku": 84},
+          {"bracket": "6枠", "winRate": 11.6, "tan": 118, "fuku": 85},
+          {"bracket": "7枠", "winRate": 7.6, "tan": 65, "fuku": 88},
+          {"bracket": "8枠", "winRate": 9.5, "tan": 93, "fuku": 95}
+        ]
+      }
+    }
+  },
+
+  // =================================================================
+  // 🍤 中京競馬場 (Chukyo)
+  // =================================================================
+  "中京": {
+    "芝": {
+      "1200m": {
+        "features": "2枠の勝率・単回収率が高い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.4, "tan": 73, "fuku": 88},
+          {"bracket": "2枠", "winRate": 8.2, "tan": 113, "fuku": 91},
+          {"bracket": "3枠", "winRate": 8.5, "tan": 75, "fuku": 90},
+          {"bracket": "4枠", "winRate": 8.2, "tan": 94, "fuku": 91},
+          {"bracket": "5枠", "winRate": 6.1, "tan": 67, "fuku": 99},
+          {"bracket": "6枠", "winRate": 5.5, "tan": 69, "fuku": 65},
+          {"bracket": "7枠", "winRate": 8.1, "tan": 94, "fuku": 73},
+          {"bracket": "8枠", "winRate": 4.2, "tan": 56, "fuku": 51}
+        ]
+      },
+      "1400m": {
+        "features": "3枠・4枠の勝率が高く安定している。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.1, "tan": 93, "fuku": 84},
+          {"bracket": "2枠", "winRate": 4.7, "tan": 60, "fuku": 74},
+          {"bracket": "3枠", "winRate": 9.3, "tan": 96, "fuku": 94},
+          {"bracket": "4枠", "winRate": 9.5, "tan": 98, "fuku": 87},
+          {"bracket": "5枠", "winRate": 6.4, "tan": 67, "fuku": 84},
+          {"bracket": "6枠", "winRate": 7.2, "tan": 89, "fuku": 76},
+          {"bracket": "7枠", "winRate": 6.8, "tan": 82, "fuku": 74},
+          {"bracket": "8枠", "winRate": 3.8, "tan": 51, "fuku": 72}
+        ]
+      },
+      "1600m": {
+        "features": "1枠・2枠・4枠と内寄りが好成績。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 9.3, "tan": 95, "fuku": 98},
+          {"bracket": "2枠", "winRate": 9.3, "tan": 96, "fuku": 95},
+          {"bracket": "3枠", "winRate": 6.8, "tan": 76, "fuku": 81},
+          {"bracket": "4枠", "winRate": 5.7, "tan": 58, "fuku": 76},
+          {"bracket": "5枠", "winRate": 8.7, "tan": 83, "fuku": 81},
+          {"bracket": "6枠", "winRate": 7.1, "tan": 70, "fuku": 84},
+          {"bracket": "7枠", "winRate": 7.9, "tan": 89, "fuku": 73},
+          {"bracket": "8枠", "winRate": 6.7, "tan": 71, "fuku": 71}
+        ]
+      },
+      "2000m": {
+        "features": "2枠の勝率・回収率が安定。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.0, "tan": 87, "fuku": 78},
+          {"bracket": "2枠", "winRate": 8.9, "tan": 92, "fuku": 86},
+          {"bracket": "3枠", "winRate": 5.9, "tan": 62, "fuku": 71},
+          {"bracket": "4枠", "winRate": 6.2, "tan": 69, "fuku": 79},
+          {"bracket": "5枠", "winRate": 7.3, "tan": 80, "fuku": 91},
+          {"bracket": "6枠", "winRate": 5.9, "tan": 70, "fuku": 75},
+          {"bracket": "7枠", "winRate": 6.0, "tan": 78, "fuku": 84},
+          {"bracket": "8枠", "winRate": 8.0, "tan": 89, "fuku": 79}
+        ]
+      },
+      "2200m": {
+        "features": "「差し有利になりやすい」。5枠の勝率13.2%、単回収率121と非常に優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.2, "tan": 63, "fuku": 84},
+          {"bracket": "2枠", "winRate": 12.0, "tan": 106, "fuku": 91},
+          {"bracket": "3枠", "winRate": 7.1, "tan": 67, "fuku": 67},
+          {"bracket": "4枠", "winRate": 10.9, "tan": 84, "fuku": 89},
+          {"bracket": "5枠", "winRate": 13.2, "tan": 121, "fuku": 86},
+          {"bracket": "6枠", "winRate": 6.5, "tan": 67, "fuku": 79},
+          {"bracket": "7枠", "winRate": 4.4, "tan": 47, "fuku": 73},
+          {"bracket": "8枠", "winRate": 7.2, "tan": 75, "fuku": 77}
+        ]
+      }
+    },
+    "ダート": {
+      "1200m": {
+        "features": "3・4コーナーが急カーブ＆下り坂で外を回るロス大。「迷ったら内枠ベタ買い」。1枠の単回収率105。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.6, "tan": 105, "fuku": 81},
+          {"bracket": "2枠", "winRate": 6.3, "tan": 68, "fuku": 88},
+          {"bracket": "3枠", "winRate": 6.3, "tan": 76, "fuku": 75},
+          {"bracket": "4枠", "winRate": 7.0, "tan": 79, "fuku": 79},
+          {"bracket": "5枠", "winRate": 6.8, "tan": 87, "fuku": 79},
+          {"bracket": "6枠", "winRate": 6.9, "tan": 82, "fuku": 89},
+          {"bracket": "7枠", "winRate": 3.7, "tan": 48, "fuku": 80},
+          {"bracket": "8枠", "winRate": 8.6, "tan": 92, "fuku": 79}
+        ]
+      },
+      "1400m": {
+        "features": "芝スタートで初角までの距離が長い。ペースが上がりやすく時計を要するタフなコース。1400m以上の距離で実績のあるスタミナタイプが好走。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.2, "tan": 65, "fuku": 71},
+          {"bracket": "2枠", "winRate": 6.0, "tan": 73, "fuku": 75},
+          {"bracket": "3枠", "winRate": 6.7, "tan": 83, "fuku": 83},
+          {"bracket": "4枠", "winRate": 7.0, "tan": 79, "fuku": 73},
+          {"bracket": "5枠", "winRate": 6.8, "tan": 87, "fuku": 82},
+          {"bracket": "6枠", "winRate": 7.6, "tan": 85, "fuku": 80},
+          {"bracket": "7枠", "winRate": 7.2, "tan": 80, "fuku": 83},
+          {"bracket": "8枠", "winRate": 6.9, "tan": 79, "fuku": 89}
+        ]
+      },
+      "1800m": {
+        "features": "「内枠＆先行馬が断然有利」。最初のコーナーまでの距離が短くペースが上がりにくい。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.4, "tan": 85, "fuku": 85},
+          {"bracket": "2枠", "winRate": 6.9, "tan": 68, "fuku": 79},
+          {"bracket": "3枠", "winRate": 7.6, "tan": 84, "fuku": 83},
+          {"bracket": "4枠", "winRate": 8.2, "tan": 88, "fuku": 80},
+          {"bracket": "5枠", "winRate": 8.6, "tan": 89, "fuku": 87},
+          {"bracket": "6枠", "winRate": 7.6, "tan": 74, "fuku": 87},
+          {"bracket": "7枠", "winRate": 6.3, "tan": 64, "fuku": 76},
+          {"bracket": "8枠", "winRate": 8.5, "tan": 84, "fuku": 88}
+        ]
+      },
+      "1900m": {
+        "features": "2枠の勝率10.1%、単回収率105と狙い目。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.4, "tan": 86, "fuku": 83},
+          {"bracket": "2枠", "winRate": 10.1, "tan": 105, "fuku": 82},
+          {"bracket": "3枠", "winRate": 4.3, "tan": 46, "fuku": 77},
+          {"bracket": "4枠", "winRate": 8.3, "tan": 85, "fuku": 80},
+          {"bracket": "5枠", "winRate": 8.2, "tan": 82, "fuku": 71},
+          {"bracket": "6枠", "winRate": 7.0, "tan": 71, "fuku": 89},
+          {"bracket": "7枠", "winRate": 8.8, "tan": 86, "fuku": 90},
+          {"bracket": "8枠", "winRate": 5.9, "tan": 70, "fuku": 80}
+        ]
+      }
+    }
+  },
+
+  // =================================================================
+  // 🐻 札幌競馬場 (Sapporo)
+  // =================================================================
+  "札幌": {
+    "芝": {
+      "1200m": {
+        "features": "8枠の勝率11.7%、単回114と大外が強い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 9.1, "tan": 98, "fuku": 76},
+          {"bracket": "2枠", "winRate": 3.9, "tan": 43, "fuku": 85},
+          {"bracket": "3枠", "winRate": 3.7, "tan": 39, "fuku": 73},
+          {"bracket": "4枠", "winRate": 4.4, "tan": 49, "fuku": 82},
+          {"bracket": "5枠", "winRate": 8.6, "tan": 104, "fuku": 87},
+          {"bracket": "6枠", "winRate": 8.9, "tan": 101, "fuku": 72},
+          {"bracket": "7枠", "winRate": 7.3, "tan": 79, "fuku": 87},
+          {"bracket": "8枠", "winRate": 11.7, "tan": 114, "fuku": 94}
+        ]
+      },
+      "1500m": {
+        "features": "6枠・3枠の勝率が高い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.9, "tan": 62, "fuku": 85},
+          {"bracket": "2枠", "winRate": 8.8, "tan": 86, "fuku": 81},
+          {"bracket": "3枠", "winRate": 9.0, "tan": 86, "fuku": 77},
+          {"bracket": "4枠", "winRate": 7.9, "tan": 77, "fuku": 81},
+          {"bracket": "5枠", "winRate": 8.0, "tan": 80, "fuku": 81},
+          {"bracket": "6枠", "winRate": 9.8, "tan": 89, "fuku": 87},
+          {"bracket": "7枠", "winRate": 8.5, "tan": 86, "fuku": 77},
+          {"bracket": "8枠", "winRate": 6.2, "tan": 65, "fuku": 74}
+        ]
+      },
+      "1800m": {
+        "features": "7枠の単回収率129が光る。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 12.4, "tan": 107, "fuku": 89},
+          {"bracket": "2枠", "winRate": 7.6, "tan": 54, "fuku": 71},
+          {"bracket": "3枠", "winRate": 9.0, "tan": 77, "fuku": 72},
+          {"bracket": "4枠", "winRate": 11.0, "tan": 89, "fuku": 82},
+          {"bracket": "5枠", "winRate": 6.5, "tan": 66, "fuku": 72},
+          {"bracket": "6枠", "winRate": 7.1, "tan": 63, "fuku": 78},
+          {"bracket": "7枠", "winRate": 13.5, "tan": 129, "fuku": 104},
+          {"bracket": "8枠", "winRate": 7.7, "tan": 62, "fuku": 93}
+        ]
+      },
+      "2000m": {
+        "features": "1枠・5枠の勝率が高い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 9.2, "tan": 91, "fuku": 83},
+          {"bracket": "2枠", "winRate": 8.3, "tan": 92, "fuku": 82},
+          {"bracket": "3枠", "winRate": 8.0, "tan": 87, "fuku": 86},
+          {"bracket": "4枠", "winRate": 5.9, "tan": 61, "fuku": 76},
+          {"bracket": "5枠", "winRate": 9.3, "tan": 87, "fuku": 72},
+          {"bracket": "6枠", "winRate": 7.5, "tan": 85, "fuku": 94},
+          {"bracket": "7枠", "winRate": 5.4, "tan": 58, "fuku": 90},
+          {"bracket": "8枠", "winRate": 7.2, "tan": 84, "fuku": 74}
+        ]
+      },
+      "2600m": {
+        "features": "2枠の単回収率148は驚異的。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 9.1, "tan": 76, "fuku": 61},
+          {"bracket": "2枠", "winRate": 16.7, "tan": 148, "fuku": 101},
+          {"bracket": "3枠", "winRate": 9.9, "tan": 98, "fuku": 95},
+          {"bracket": "4枠", "winRate": 5.4, "tan": 57, "fuku": 63},
+          {"bracket": "5枠", "winRate": 7.9, "tan": 68, "fuku": 101},
+          {"bracket": "6枠", "winRate": 10.0, "tan": 122, "fuku": 72},
+          {"bracket": "7枠", "winRate": 1.2, "tan": 13, "fuku": 67},
+          {"bracket": "8枠", "winRate": 8.1, "tan": 82, "fuku": 83}
+        ]
+      }
+    },
+    "ダート": {
+      "1000m": {
+        "features": "7枠・8枠の外枠が好走。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 9.2, "tan": 88, "fuku": 70},
+          {"bracket": "2枠", "winRate": 4.7, "tan": 57, "fuku": 64},
+          {"bracket": "3枠", "winRate": 7.0, "tan": 56, "fuku": 67},
+          {"bracket": "4枠", "winRate": 6.9, "tan": 75, "fuku": 71},
+          {"bracket": "5枠", "winRate": 6.4, "tan": 55, "fuku": 70},
+          {"bracket": "6枠", "winRate": 7.9, "tan": 80, "fuku": 83},
+          {"bracket": "7枠", "winRate": 13.9, "tan": 99, "fuku": 94},
+          {"bracket": "8枠", "winRate": 10.4, "tan": 90, "fuku": 96}
+        ]
+      },
+      "1700m": {
+        "features": "4枠・6枠の勝率が高い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.1, "tan": 82, "fuku": 78},
+          {"bracket": "2枠", "winRate": 5.3, "tan": 61, "fuku": 69},
+          {"bracket": "3枠", "winRate": 4.7, "tan": 53, "fuku": 72},
+          {"bracket": "4枠", "winRate": 8.8, "tan": 87, "fuku": 75},
+          {"bracket": "5枠", "winRate": 8.4, "tan": 86, "fuku": 89},
+          {"bracket": "6枠", "winRate": 8.7, "tan": 89, "fuku": 90},
+          {"bracket": "7枠", "winRate": 8.1, "tan": 83, "fuku": 83},
+          {"bracket": "8枠", "winRate": 7.6, "tan": 76, "fuku": 82}
+        ]
+      }
+    }
+  },
+
+  // =================================================================
+  // 🦑 函館競馬場 (Hakodate)
+  // =================================================================
+  "函館": {
+    "芝": {
+      "1200m": {
+        "features": "5枠・8枠が好調。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.7, "tan": 71, "fuku": 82},
+          {"bracket": "2枠", "winRate": 8.0, "tan": 80, "fuku": 92},
+          {"bracket": "3枠", "winRate": 7.3, "tan": 74, "fuku": 80},
+          {"bracket": "4枠", "winRate": 8.3, "tan": 74, "fuku": 75},
+          {"bracket": "5枠", "winRate": 9.6, "tan": 93, "fuku": 77},
+          {"bracket": "6枠", "winRate": 8.2, "tan": 84, "fuku": 84},
+          {"bracket": "7枠", "winRate": 5.6, "tan": 62, "fuku": 72},
+          {"bracket": "8枠", "winRate": 8.4, "tan": 100, "fuku": 86}
+        ]
+      },
+      "1800m": {
+        "features": "3枠の勝率11.8%が優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.1, "tan": 58, "fuku": 71},
+          {"bracket": "2枠", "winRate": 8.3, "tan": 83, "fuku": 91},
+          {"bracket": "3枠", "winRate": 11.8, "tan": 98, "fuku": 97},
+          {"bracket": "4枠", "winRate": 7.3, "tan": 75, "fuku": 87},
+          {"bracket": "5枠", "winRate": 8.5, "tan": 92, "fuku": 79},
+          {"bracket": "6枠", "winRate": 7.1, "tan": 68, "fuku": 70},
+          {"bracket": "7枠", "winRate": 8.6, "tan": 88, "fuku": 80},
+          {"bracket": "8枠", "winRate": 5.7, "tan": 66, "fuku": 73}
+        ]
+      },
+      "2000m": {
+        "features": "6枠の単回収率132とベタ買いでプラス。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.3, "tan": 58, "fuku": 68},
+          {"bracket": "2枠", "winRate": 11.3, "tan": 122, "fuku": 82},
+          {"bracket": "3枠", "winRate": 5.7, "tan": 59, "fuku": 64},
+          {"bracket": "4枠", "winRate": 9.0, "tan": 81, "fuku": 90},
+          {"bracket": "5枠", "winRate": 8.1, "tan": 81, "fuku": 100},
+          {"bracket": "6枠", "winRate": 11.6, "tan": 132, "fuku": 94},
+          {"bracket": "7枠", "winRate": 6.0, "tan": 63, "fuku": 78},
+          {"bracket": "8枠", "winRate": 4.3, "tan": 46, "fuku": 59}
+        ]
+      },
+      "2600m": {
+        "features": "1枠の単回収率117。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 11.1, "tan": 117, "fuku": 94},
+          {"bracket": "2枠", "winRate": 10.5, "tan": 67, "fuku": 68},
+          {"bracket": "3枠", "winRate": 10.0, "tan": 82, "fuku": 84},
+          {"bracket": "4枠", "winRate": 7.1, "tan": 56, "fuku": 77},
+          {"bracket": "5枠", "winRate": 8.2, "tan": 110, "fuku": 104},
+          {"bracket": "6枠", "winRate": 5.9, "tan": 63, "fuku": 74},
+          {"bracket": "7枠", "winRate": 8.9, "tan": 99, "fuku": 73},
+          {"bracket": "8枠", "winRate": 6.9, "tan": 65, "fuku": 93}
+        ]
+      }
+    },
+    "ダート": {
+      "1000m": {
+        "features": "1枠・8枠の内外両端が有利。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 11.5, "tan": 102, "fuku": 90},
+          {"bracket": "2枠", "winRate": 5.2, "tan": 47, "fuku": 86},
+          {"bracket": "3枠", "winRate": 10.3, "tan": 88, "fuku": 77},
+          {"bracket": "4枠", "winRate": 8.2, "tan": 76, "fuku": 68},
+          {"bracket": "5枠", "winRate": 8.8, "tan": 90, "fuku": 76},
+          {"bracket": "6枠", "winRate": 7.7, "tan": 69, "fuku": 88},
+          {"bracket": "7枠", "winRate": 7.6, "tan": 66, "fuku": 77},
+          {"bracket": "8枠", "winRate": 11.3, "tan": 90, "fuku": 96}
+        ]
+      },
+      "1700m": {
+        "features": "3枠の勝率10.2%、単回110と優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.2, "tan": 71, "fuku": 97},
+          {"bracket": "2枠", "winRate": 4.3, "tan": 43, "fuku": 87},
+          {"bracket": "3枠", "winRate": 10.2, "tan": 110, "fuku": 97},
+          {"bracket": "4枠", "winRate": 5.7, "tan": 65, "fuku": 67},
+          {"bracket": "5枠", "winRate": 8.3, "tan": 86, "fuku": 81},
+          {"bracket": "6枠", "winRate": 8.2, "tan": 81, "fuku": 78},
+          {"bracket": "7枠", "winRate": 9.6, "tan": 98, "fuku": 96},
+          {"bracket": "8枠", "winRate": 7.7, "tan": 65, "fuku": 65}
+        ]
+      }
+    }
+  },
+
+  // =================================================================
+  // 🎢 小倉競馬場 (Kokura)
+  // =================================================================
+  "小倉": {
+    "芝": {
+      "1200m": {
+        "features": "7・8枠の外枠が回収率的においしい。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.2, "tan": 83, "fuku": 78},
+          {"bracket": "2枠", "winRate": 4.7, "tan": 56, "fuku": 70},
+          {"bracket": "3枠", "winRate": 5.7, "tan": 74, "fuku": 83},
+          {"bracket": "4枠", "winRate": 4.5, "tan": 54, "fuku": 72},
+          {"bracket": "5枠", "winRate": 7.3, "tan": 88, "fuku": 76},
+          {"bracket": "6枠", "winRate": 5.7, "tan": 65, "fuku": 79},
+          {"bracket": "7枠", "winRate": 8.7, "tan": 98, "fuku": 93},
+          {"bracket": "8枠", "winRate": 7.7, "tan": 102, "fuku": 89}
+        ]
+      },
+      "1800m": {
+        "features": "5枠の勝率9.1%が優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.8, "tan": 59, "fuku": 75},
+          {"bracket": "2枠", "winRate": 8.0, "tan": 86, "fuku": 72},
+          {"bracket": "3枠", "winRate": 8.4, "tan": 81, "fuku": 73},
+          {"bracket": "4枠", "winRate": 5.4, "tan": 60, "fuku": 81},
+          {"bracket": "5枠", "winRate": 9.1, "tan": 86, "fuku": 77},
+          {"bracket": "6枠", "winRate": 7.8, "tan": 83, "fuku": 91},
+          {"bracket": "7枠", "winRate": 8.6, "tan": 93, "fuku": 89},
+          {"bracket": "8枠", "winRate": 7.1, "tan": 82, "fuku": 86}
+        ]
+      },
+      "2000m": {
+        "features": "4枠の勝率11.1%、単回112と狙い目。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.8, "tan": 91, "fuku": 73},
+          {"bracket": "2枠", "winRate": 9.3, "tan": 82, "fuku": 82},
+          {"bracket": "3枠", "winRate": 4.5, "tan": 49, "fuku": 86},
+          {"bracket": "4枠", "winRate": 11.1, "tan": 112, "fuku": 84},
+          {"bracket": "5枠", "winRate": 7.3, "tan": 84, "fuku": 74},
+          {"bracket": "6枠", "winRate": 9.3, "tan": 88, "fuku": 82},
+          {"bracket": "7枠", "winRate": 6.3, "tan": 71, "fuku": 82},
+          {"bracket": "8枠", "winRate": 5.8, "tan": 66, "fuku": 81}
+        ]
+      },
+      "2600m": {
+        "features": "2枠・8枠の単回収率が高い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.5, "tan": 70, "fuku": 81},
+          {"bracket": "2枠", "winRate": 10.8, "tan": 126, "fuku": 109},
+          {"bracket": "3枠", "winRate": 2.6, "tan": 27, "fuku": 93},
+          {"bracket": "4枠", "winRate": 8.8, "tan": 77, "fuku": 85},
+          {"bracket": "5枠", "winRate": 6.9, "tan": 69, "fuku": 96},
+          {"bracket": "6枠", "winRate": 10.6, "tan": 100, "fuku": 70},
+          {"bracket": "7枠", "winRate": 4.0, "tan": 38, "fuku": 54},
+          {"bracket": "8枠", "winRate": 12.7, "tan": 124, "fuku": 91}
+        ]
+      }
+    },
+    "ダート": {
+      "1000m": {
+        "features": "2・3枠の回収率が安定。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 5.1, "tan": 57, "fuku": 96},
+          {"bracket": "2枠", "winRate": 8.9, "tan": 89, "fuku": 86},
+          {"bracket": "3枠", "winRate": 8.3, "tan": 90, "fuku": 85},
+          {"bracket": "4枠", "winRate": 6.9, "tan": 73, "fuku": 79},
+          {"bracket": "5枠", "winRate": 9.3, "tan": 92, "fuku": 72},
+          {"bracket": "6枠", "winRate": 7.8, "tan": 75, "fuku": 86},
+          {"bracket": "7枠", "winRate": 6.2, "tan": 63, "fuku": 76},
+          {"bracket": "8枠", "winRate": 7.4, "tan": 88, "fuku": 93}
+        ]
+      },
+      "1700m": {
+        "features": "6枠の勝率・回収率が高い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.9, "tan": 81, "fuku": 90},
+          {"bracket": "2枠", "winRate": 6.6, "tan": 88, "fuku": 84},
+          {"bracket": "3枠", "winRate": 6.1, "tan": 67, "fuku": 72},
+          {"bracket": "4枠", "winRate": 7.0, "tan": 78, "fuku": 84},
+          {"bracket": "5枠", "winRate": 6.1, "tan": 71, "fuku": 72},
+          {"bracket": "6枠", "winRate": 8.5, "tan": 93, "fuku": 89},
+          {"bracket": "7枠", "winRate": 5.3, "tan": 66, "fuku": 69},
+          {"bracket": "8枠", "winRate": 7.7, "tan": 88, "fuku": 81}
         ]
       }
     }
