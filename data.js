@@ -999,5 +999,96 @@ const raceData = {
         ]
       }
     }
+  },
+
+  // これを小倉のデータの最後と、一番最後の }; の間に貼り付けます
+  ,
+  "福島": {
+    "芝": {
+      "1200m": {
+        "features": "【Aコースは内枠・先行、Bコースは外枠・差し】スタート後すぐ上り坂でペースが上がりにくく基本は内前有利。＜激アツ＞Bコース替わり時、前走4角10番手以下かつ今回8枠に入った馬（単複回収率138%）。データ上は2枠・3枠の成績も良い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.2, "tan": 79, "fuku": 92},
+          {"bracket": "2枠", "winRate": 10.5, "tan": 106, "fuku": 89},
+          {"bracket": "3枠", "winRate": 9.5, "tan": 110, "fuku": 82},
+          {"bracket": "4枠", "winRate": 7.1, "tan": 81, "fuku": 78},
+          {"bracket": "5枠", "winRate": 4.8, "tan": 61, "fuku": 59},
+          {"bracket": "6枠", "winRate": 6.0, "tan": 68, "fuku": 83},
+          {"bracket": "7枠", "winRate": 4.5, "tan": 57, "fuku": 77},
+          {"bracket": "8枠", "winRate": 5.5, "tan": 71, "fuku": 89}
+        ]
+      },
+      "1800m": {
+        "features": "【Aコースは内枠・先行、Bコースは外枠・差し】過去10年、Aコース使用のラジオNIKKEI賞は1枠と逃げ馬の複勝率が非常に高いが、Bコース使用の福島牝馬Sでは大きく落ちる傾向。データ上は3枠の単回収率111と優秀。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.5, "tan": 81, "fuku": 75},
+          {"bracket": "2枠", "winRate": 8.2, "tan": 99, "fuku": 78},
+          {"bracket": "3枠", "winRate": 9.7, "tan": 111, "fuku": 98},
+          {"bracket": "4枠", "winRate": 7.8, "tan": 91, "fuku": 89},
+          {"bracket": "5枠", "winRate": 5.8, "tan": 62, "fuku": 89},
+          {"bracket": "6枠", "winRate": 6.0, "tan": 67, "fuku": 78},
+          {"bracket": "7枠", "winRate": 5.6, "tan": 66, "fuku": 84},
+          {"bracket": "8枠", "winRate": 5.6, "tan": 63, "fuku": 65}
+        ]
+      },
+      "2000m": {
+        "features": "タフなコースで差しが届く。初角まで長くペースが上がりやすい。Bコース替わりでさらに差し有利に。＜激アツ＞持続力が活きるキズナ産駒（単回240%・複回135%）。勝ち馬の上がりが35秒以上かかるタフな展開を想定する。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.0, "tan": 64, "fuku": 79},
+          {"bracket": "2枠", "winRate": 5.6, "tan": 70, "fuku": 63},
+          {"bracket": "3枠", "winRate": 8.8, "tan": 84, "fuku": 85},
+          {"bracket": "4枠", "winRate": 9.4, "tan": 119, "fuku": 93},
+          {"bracket": "5枠", "winRate": 8.8, "tan": 90, "fuku": 86},
+          {"bracket": "6枠", "winRate": 5.5, "tan": 61, "fuku": 76},
+          {"bracket": "7枠", "winRate": 6.5, "tan": 80, "fuku": 83},
+          {"bracket": "8枠", "winRate": 5.6, "tan": 72, "fuku": 77}
+        ]
+      },
+      "2600m": {
+        "features": "序盤スローからのまくり合戦になりやすく、超タフな消耗戦になる。オルフェーヴル（単回231%）やゴールドシップ（単回153%）などスタミナ豊富なステイゴールド系産駒を探せ！データ上は2枠や8枠の回収率が高い。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 7.4, "tan": 93, "fuku": 83},
+          {"bracket": "2枠", "winRate": 9.2, "tan": 91, "fuku": 105},
+          {"bracket": "3枠", "winRate": 7.7, "tan": 78, "fuku": 76},
+          {"bracket": "4枠", "winRate": 6.5, "tan": 69, "fuku": 65},
+          {"bracket": "5枠", "winRate": 8.2, "tan": 85, "fuku": 74},
+          {"bracket": "6枠", "winRate": 8.8, "tan": 75, "fuku": 76},
+          {"bracket": "7枠", "winRate": 4.8, "tan": 63, "fuku": 60},
+          {"bracket": "8枠", "winRate": 6.7, "tan": 86, "fuku": 110}
+        ]
+      }
+    },
+    "ダート": {
+      "1150m": {
+        "features": "基本は芝を長く走れる外枠有利。しかし【道悪の時は内枠有利】に一変する。馬場が高速化しタイムトライアルになるため外を回すロスが大きくなる。＜激アツ＞重・不良時の1枠（単回265%・複回153%）。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 8.2, "tan": 100, "fuku": 96},
+          {"bracket": "2枠", "winRate": 5.0, "tan": 67, "fuku": 74},
+          {"bracket": "3枠", "winRate": 8.8, "tan": 107, "fuku": 92},
+          {"bracket": "4枠", "winRate": 6.6, "tan": 73, "fuku": 78},
+          {"bracket": "5枠", "winRate": 5.5, "tan": 66, "fuku": 74},
+          {"bracket": "6枠", "winRate": 5.4, "tan": 64, "fuku": 74},
+          {"bracket": "7枠", "winRate": 4.5, "tan": 55, "fuku": 63},
+          {"bracket": "8枠", "winRate": 9.3, "tan": 94, "fuku": 95}
+        ]
+      },
+      "1700m": {
+        "features": "実はタフなコースレイアウト。1、2コーナーが下り坂でペースが上がりやすいため、「距離短縮組」と「差し馬」が有利になりやすい。枠順は2枠と6枠の勝率・回収率が安定している。",
+        "stats": [
+          {"bracket": "1枠", "winRate": 6.8, "tan": 78, "fuku": 81},
+          {"bracket": "2枠", "winRate": 7.9, "tan": 88, "fuku": 84},
+          {"bracket": "3枠", "winRate": 6.5, "tan": 74, "fuku": 76},
+          {"bracket": "4枠", "winRate": 5.1, "tan": 61, "fuku": 77},
+          {"bracket": "5枠", "winRate": 6.5, "tan": 85, "fuku": 71},
+          {"bracket": "6枠", "winRate": 7.9, "tan": 88, "fuku": 82},
+          {"bracket": "7枠", "winRate": 6.9, "tan": 82, "fuku": 82},
+          {"bracket": "8枠", "winRate": 7.4, "tan": 81, "fuku": 85}
+        ]
+      },
+      "2400m": {
+        "features": "逃げ・先行馬が断然有利。向正面からゴールまで上り坂が続き、全馬が脚を無くすため4角の位置取りが直結する。過去5年で逃げ馬単回582%、先行馬単回317%。「距離延長＋前走差し追い込み」の馬も単回224%と狙い目。",
+        "stats": []
+      }
+    }
   }
 };
