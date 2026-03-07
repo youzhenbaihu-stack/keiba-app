@@ -269,6 +269,12 @@ const raceData = {
           {"bracket": "6枠", "winRate": 7.6, "tan": 81, "fuku": 67},
           {"bracket": "7枠", "winRate": 8.8, "tan": 99, "fuku": 100},
           {"bracket": "8枠", "winRate": 5.6, "tan": 70, "fuku": 72}
+        ],　// ← ここにカンマを忘れずに！
+        "styles": [
+          {"style": "逃げ", "results": "22-14-13-130", "winRate": 12.0, "rentaiRate": 20.0, "placeRate": 27.0, "tan": 90},
+          {"style": "先行", "results": "52-51-56-534", "winRate": 7.5, "rentaiRate": 15.0, "placeRate": 23.0, "tan": 75},
+          {"style": "差し", "results": "31-32-31-488", "winRate": 5.3, "rentaiRate": 11.0, "placeRate": 16.0, "tan": 128},
+          {"style": "追込", "results": "5-13-13-204", "winRate": 2.1, "rentaiRate": 7.7, "placeRate": 13.0, "tan": 15}
         ]
       },
       "1400m内": {
@@ -296,6 +302,12 @@ const raceData = {
           {"bracket": "7枠", "winRate": 9.2, "tan": 106, "fuku": 103},
           {"bracket": "8枠", "winRate": 7.8, "tan": 89, "fuku": 71}
         ]
+        ,"styles": [
+          {"style": "逃げ", "results": "7-6-6-64", "winRate": 8.4, "rentaiRate": 16.0, "placeRate": 23.0, "tan": 133},
+          {"style": "先行", "results": "28-36-32-346", "winRate": 6.3, "rentaiRate": 14.0, "placeRate": 22.0, "tan": 63},
+          {"style": "差し", "results": "42-37-34-372", "winRate": 8.7, "rentaiRate": 16.0, "placeRate": 23.0, "tan": 107},
+          {"style": "追込", "results": "8-6-13-182", "winRate": 3.8, "rentaiRate": 6.7, "placeRate": 13.0, "tan": 28}
+        ]
       },
       "1600m内": {
         "features": "4枠の勝率・回収率が高い（勝率9.9%、単回107）。【脚質傾向】逃げ馬の単勝回収率が115%とトップで、単騎逃げには警戒が必要。",
@@ -322,6 +334,12 @@ const raceData = {
           {"bracket": "7枠", "winRate": 8.7, "tan": 85, "fuku": 75},
           {"bracket": "8枠", "winRate": 11.4, "tan": 117, "fuku": 104}
         ]
+        ,"styles": [
+          {"style": "逃げ", "results": "10-8-9-92", "winRate": 8.4, "rentaiRate": 15.0, "placeRate": 23.0, "tan": 115},
+          {"style": "先行", "results": "49-37-44-422", "winRate": 8.9, "rentaiRate": 16.0, "placeRate": 24.0, "tan": 93},
+          {"style": "差し", "results": "45-63-49-506", "winRate": 6.8, "rentaiRate": 16.0, "placeRate": 24.0, "tan": 75},
+          {"style": "追込", "results": "13-9-16-267", "winRate": 4.3, "rentaiRate": 7.2, "placeRate": 12.0, "tan": 49}
+        ]
       },
       "1800m": {
         "features": "5枠・6枠の勝率が高く、単回収率も100超え。【脚質傾向】先行馬の成績が圧倒的で、単勝回収率118%と非常に優秀。前目につけられる馬から入りたい。",
@@ -334,6 +352,12 @@ const raceData = {
           {"bracket": "6枠", "winRate": 9.9, "tan": 104, "fuku": 77},
           {"bracket": "7枠", "winRate": 7.3, "tan": 74, "fuku": 70},
           {"bracket": "8枠", "winRate": 8.6, "tan": 81, "fuku": 93}
+        ]
+        ,"styles": [
+          {"style": "逃げ", "results": "11-11-6-100", "winRate": 8.6, "rentaiRate": 17.0, "placeRate": 22.0, "tan": 30},
+          {"style": "先行", "results": "61-59-48-496", "winRate": 9.2, "rentaiRate": 18.0, "placeRate": 25.0, "tan": 118},
+          {"style": "差し", "results": "54-59-66-671", "winRate": 6.4, "rentaiRate": 13.0, "placeRate": 21.0, "tan": 32},
+          {"style": "追込", "results": "27-22-32-344", "winRate": 6.4, "rentaiRate": 12.0, "placeRate": 19.0, "tan": 52}
         ]
       },
       "2000m": {
@@ -348,6 +372,12 @@ const raceData = {
           {"bracket": "7枠", "winRate": 11.2, "tan": 106, "fuku": 97},
           {"bracket": "8枠", "winRate": 7.7, "tan": 68, "fuku": 80}
         ]
+        ,"styles": [
+          {"style": "逃げ", "results": "15-12-7-92", "winRate": 12.0, "rentaiRate": 21.0, "placeRate": 27.0, "tan": 72},
+          {"style": "先行", "results": "54-57-60-410", "winRate": 9.3, "rentaiRate": 19.0, "placeRate": 29.0, "tan": 65},
+          {"style": "差し", "results": "62-60-64-591", "winRate": 8.0, "rentaiRate": 16.0, "placeRate": 24.0, "tan": 82},
+          {"style": "追込", "results": "15-17-15-304", "winRate": 4.3, "rentaiRate": 9.1, "placeRate": 13.0, "tan": 99}
+        ]
       },
       "2200m": {
         "features": "「タフなコースで距離短縮組有利」。長い距離＋3・4角の下りから早めスパートでスタミナの要求値上がる。8枠の回収率が高い。【脚質傾向】先行馬が単勝回収率177%と超激アツ！好位から長くいい脚を使える馬を狙え。",
@@ -361,6 +391,12 @@ const raceData = {
           {"bracket": "7枠", "winRate": 7.2, "tan": 68, "fuku": 61},
           {"bracket": "8枠", "winRate": 11.6, "tan": 126, "fuku": 84}
         ]
+        ,"styles": [
+          {"style": "逃げ", "results": "2-3-2-50", "winRate": 3.5, "rentaiRate": 8.8, "placeRate": 12.0, "tan": 16},
+          {"style": "先行", "results": "31-35-19-203", "winRate": 11.0, "rentaiRate": 23.0, "placeRate": 30.0, "tan": 177},
+          {"style": "差し", "results": "37-27-32-340", "winRate": 8.5, "rentaiRate": 15.0, "placeRate": 22.0, "tan": 97},
+          {"style": "追込", "results": "5-10-22-180", "winRate": 2.3, "rentaiRate": 6.9, "placeRate": 17.0, "tan": 16}
+        ]
       },
       "2400m": {
         "features": "「能力のある馬を信頼すべき」。スロー→瞬発力勝負になりやすく、紛れが少ない。4枠の勝率・回収率が優秀。【脚質傾向】先行（単回111%）と差し（単回100%）の成績が安定している。",
@@ -373,6 +409,12 @@ const raceData = {
           {"bracket": "6枠", "winRate": 3.0, "tan": 34, "fuku": 55},
           {"bracket": "7枠", "winRate": 9.7, "tan": 93, "fuku": 90},
           {"bracket": "8枠", "winRate": 6.8, "tan": 70, "fuku": 77}
+        ]
+        ,"styles": [
+          {"style": "逃げ", "results": "6-4-6-32", "winRate": 13.0, "rentaiRate": 21.0, "placeRate": 33.0, "tan": 64},
+          {"style": "先行", "results": "31-33-22-196", "winRate": 11.0, "rentaiRate": 23.0, "placeRate": 30.0, "tan": 111},
+          {"style": "差し", "results": "33-25-38-266", "winRate": 9.1, "rentaiRate": 16.0, "placeRate": 27.0, "tan": 100},
+          {"style": "追込", "results": "9-17-13-154", "winRate": 4.7, "rentaiRate": 13.0, "placeRate": 20.0, "tan": 35}
         ]
       },
       "3000m": {
@@ -392,6 +434,12 @@ const raceData = {
           {"bracket": "6枠", "winRate": 7.8, "tan": 89, "fuku": 87},
           {"bracket": "7枠", "winRate": 11.1, "tan": 121, "fuku": 96},
           {"bracket": "8枠", "winRate": 9.0, "tan": 91, "fuku": 99}
+        ]
+        ,"styles": [
+          {"style": "逃げ", "results": "30-28-36-314", "winRate": 7.4, "rentaiRate": 14.0, "placeRate": 23.0, "tan": 40},
+          {"style": "先行", "results": "167-149-134-1457", "winRate": 8.8, "rentaiRate": 17.0, "placeRate": 24.0, "tan": 86},
+          {"style": "差し", "results": "68-86-84-1211", "winRate": 4.7, "rentaiRate": 11.0, "placeRate": 16.0, "tan": 75},
+          {"style": "追込", "results": "24-26-35-587", "winRate": 3.6, "rentaiRate": 7.4, "placeRate": 13.0, "tan": 62}
         ]
       },
       "1400m": {
@@ -419,6 +467,12 @@ const raceData = {
           {"bracket": "7枠", "winRate": 6.9, "tan": 76, "fuku": 82},
           {"bracket": "8枠", "winRate": 9.1, "tan": 81, "fuku": 79}
         ]
+        ,"styles": [
+          {"style": "逃げ", "results": "40-38-31-322", "winRate": 9.3, "rentaiRate": 18.0, "placeRate": 25.0, "tan": 61},
+          {"style": "先行", "results": "208-196-176-1529", "winRate": 9.9, "rentaiRate": 19.0, "placeRate": 28.0, "tan": 83},
+          {"style": "差し", "results": "150-170-173-1916", "winRate": 6.2, "rentaiRate": 13.0, "placeRate": 20.0, "tan": 109},
+          {"style": "追込", "results": "57-49-76-1130", "winRate": 4.3, "rentaiRate": 8.1, "placeRate": 14.0, "tan": 71}
+        ]
       },
       "1900m": {
         "features": "「内枠の差し馬を狙え」。1枠は単複共に100%超えと成績抜群。初角までの距離伸びてペースUP→差し有利。【脚質傾向】逃げ（単回147%）、先行（単回125%）など、前に行く馬の回収率が非常に高く強力。",
@@ -431,6 +485,12 @@ const raceData = {
           {"bracket": "6枠", "winRate": 7.0, "tan": 95, "fuku": 89},
           {"bracket": "7枠", "winRate": 8.8, "tan": 93, "fuku": 73},
           {"bracket": "8枠", "winRate": 5.9, "tan": 70, "fuku": 80}
+        ]
+        ,"styles": [
+          {"style": "逃げ", "results": "7-3-6-63", "winRate": 8.9, "rentaiRate": 13.0, "placeRate": 20.0, "tan": 147},
+          {"style": "先行", "results": "56-48-43-305", "winRate": 12.0, "rentaiRate": 23.0, "placeRate": 33.0, "tan": 125},
+          {"style": "差し", "results": "28-38-39-418", "winRate": 5.4, "rentaiRate": 13.0, "placeRate": 20.0, "tan": 104},
+          {"style": "追込", "results": "11-13-15-240", "winRate": 3.9, "rentaiRate": 8.6, "placeRate": 14.0, "tan": 122}
         ]
       }
     }
