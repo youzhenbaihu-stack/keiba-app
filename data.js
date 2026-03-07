@@ -16,6 +16,12 @@ const raceData = {
           {"bracket": "7枠", "winRate": 7.5, "tan": 78, "fuku": 76},
           {"bracket": "8枠", "winRate": 3.6, "tan": 52, "fuku": 64}
         ]
+        ,"styles": [
+          {"style": "逃げ", "results": "10-7-2-114", "winRate": 7.5, "rentaiRate": 13.0, "placeRate": 14.0, "tan": 70},
+          {"style": "先行", "results": "58-57-58-491", "winRate": 8.7, "rentaiRate": 17.0, "placeRate": 26.0, "tan": 106},
+          {"style": "差し", "results": "32-37-34-506", "winRate": 5.3, "rentaiRate": 11.0, "placeRate": 17.0, "tan": 66},
+          {"style": "追込", "results": "9-9-15-238", "winRate": 3.3, "rentaiRate": 6.6, "placeRate": 12.0, "tan": 24}
+        ]
       },
       "1600m": {
         "features": "おむすび型の変則コース。1枠の勝率・回収率が高く、内枠有利の傾向がある。外枠（特に8枠）は割引が必要。",
@@ -28,6 +34,12 @@ const raceData = {
           {"bracket": "6枠", "winRate": 5.1, "tan": 63, "fuku": 77},
           {"bracket": "7枠", "winRate": 4.5, "tan": 59, "fuku": 76},
           {"bracket": "8枠", "winRate": 4.4, "tan": 61, "fuku": 82}
+        ]
+        ,"styles": [
+          {"style": "逃げ", "results": "19-14-13-163", "winRate": 9.1, "rentaiRate": 16.0, "placeRate": 22.0, "tan": 82},
+          {"style": "先行", "results": "86-85-84-873", "winRate": 7.6, "rentaiRate": 15.0, "placeRate": 23.0, "tan": 72},
+          {"style": "差し", "results": "73-91-78-895", "winRate": 6.4, "rentaiRate": 14.0, "placeRate": 21.0, "tan": 76},
+          {"style": "追込", "results": "23-13-24-423", "winRate": 4.8, "rentaiRate": 7.5, "placeRate": 12.0, "tan": 62}
         ]
       },
       "1800m": {
@@ -42,6 +54,12 @@ const raceData = {
           {"bracket": "7枠", "winRate": 9.1, "tan": 93, "fuku": 84},
           {"bracket": "8枠", "winRate": 7.4, "tan": 86, "fuku": 75}
         ]
+        ,"styles": [
+          {"style": "逃げ", "results": "13-9-9-120", "winRate": 8.6, "rentaiRate": 15.0, "placeRate": 21.0, "tan": 57},
+          {"style": "先行", "results": "57-69-56-460", "winRate": 8.9, "rentaiRate": 20.0, "placeRate": 28.0, "tan": 66},
+          {"style": "差し", "results": "53-42-52-587", "winRate": 7.2, "rentaiRate": 13.0, "placeRate": 20.0, "tan": 53},
+          {"style": "追込", "results": "7-12-13-224", "winRate": 2.7, "rentaiRate": 7.4, "placeRate": 13.0, "tan": 23}
+        ]
       },
       "2000m": {
         "features": "1コーナーまでの距離があり、枠順の有利不利は比較的少ないが、6枠の回収率が優秀。",
@@ -54,6 +72,12 @@ const raceData = {
           {"bracket": "6枠", "winRate": 8.4, "tan": 96, "fuku": 94},
           {"bracket": "7枠", "winRate": 6.8, "tan": 75, "fuku": 85},
           {"bracket": "8枠", "winRate": 6.5, "tan": 75, "fuku": 75}
+        ]
+        ,"styles": [
+          {"style": "逃げ", "results": "4-6-6-105", "winRate": 3.3, "rentaiRate": 8.3, "placeRate": 13.0, "tan": 32},
+          {"style": "先行", "results": "70-68-75-648", "winRate": 8.1, "rentaiRate": 16.0, "placeRate": 25.0, "tan": 81},
+          {"style": "差し", "results": "68-68-62-774", "winRate": 7.0, "rentaiRate": 14.0, "placeRate": 20.0, "tan": 61},
+          {"style": "追込", "results": "21-21-22-378", "winRate": 4.8, "rentaiRate": 9.5, "placeRate": 14.0, "tan": 28}
         ]
       },
       "2200m": {
@@ -68,6 +92,12 @@ const raceData = {
           {"bracket": "7枠", "winRate": 8.0, "tan": 97, "fuku": 88},
           {"bracket": "8枠", "winRate": 6.5, "tan": 89, "fuku": 98}
         ]
+        ,"styles": [
+          {"style": "逃げ", "results": "6-2-2-50", "winRate": 10.0, "rentaiRate": 13.0, "placeRate": 17.0, "tan": 65},
+          {"style": "先行", "results": "30-26-29-234", "winRate": 9.4, "rentaiRate": 18.0, "placeRate": 27.0, "tan": 91},
+          {"style": "差し", "results": "29-31-30-362", "winRate": 6.4, "rentaiRate": 13.0, "placeRate": 20.0, "tan": 73},
+          {"style": "追込", "results": "7-13-11-210", "winRate": 2.9, "rentaiRate": 8.3, "placeRate": 13.0, "tan": 18}
+        ]
       },
       "2500m": {
         "features": "有馬記念の舞台。コーナーを6回回るため、ロスのない内枠（特に5枠・6枠の勝率が高い）や立ち回りの上手さが重要。",
@@ -80,6 +110,12 @@ const raceData = {
           {"bracket": "6枠", "winRate": 11.4, "tan": 110, "fuku": 94},
           {"bracket": "7枠", "winRate": 8.6, "tan": 68, "fuku": 62},
           {"bracket": "8枠", "winRate": 5.3, "tan": 72, "fuku": 76}
+        ]
+        ,"styles": [
+          {"style": "逃げ", "results": "4-4-2-31", "winRate": 9.8, "rentaiRate": 20.0, "placeRate": 24.0, "tan": 282},
+          {"style": "先行", "results": "19-15-23-160", "winRate": 8.8, "rentaiRate": 16.0, "placeRate": 26.0, "tan": 79},
+          {"style": "差し", "results": "22-20-16-188", "winRate": 8.9, "rentaiRate": 17.0, "placeRate": 24.0, "tan": 72},
+          {"style": "追込", "results": "4-10-8-113", "winRate": 3.0, "rentaiRate": 10.0, "placeRate": 16.0, "tan": 45}
         ]
       }
     },
@@ -96,6 +132,12 @@ const raceData = {
           {"bracket": "7枠", "winRate": 7.1, "tan": 79, "fuku": 86},
           {"bracket": "8枠", "winRate": 7.7, "tan": 79, "fuku": 80}
         ]
+        ,"styles": [
+          {"style": "逃げ", "results": "64-41-49-449", "winRate": 11.0, "rentaiRate": 17.0, "placeRate": 26.0, "tan": 98},
+          {"style": "先行", "results": "277-248-234-2258", "winRate": 9.2, "rentaiRate": 17.0, "placeRate": 25.0, "tan": 79},
+          {"style": "差し", "results": "112-141-160-2304", "winRate": 4.1, "rentaiRate": 9.3, "placeRate": 15.0, "tan": 37},
+          {"style": "追込", "results": "34-58-44-1208", "winRate": 2.5, "rentaiRate": 6.8, "placeRate": 10.0, "tan": 44}
+        ]
       },
       "1800m": {
         "features": "スタート直後に急坂があり、そもそもペースが速くならないことが多い。6～8枠＋前走4角5番手以内の馬は、単勝回収率100%超え（激アツ条件）。",
@@ -108,6 +150,12 @@ const raceData = {
           {"bracket": "6枠", "winRate": 7.6, "tan": 82, "fuku": 83},
           {"bracket": "7枠", "winRate": 7.4, "tan": 79, "fuku": 85},
           {"bracket": "8枠", "winRate": 9.1, "tan": 91, "fuku": 88}
+        ]
+        ,"styles": [
+          {"style": "逃げ", "results": "49-37-34-347", "winRate": 10.0, "rentaiRate": 18.0, "placeRate": 26.0, "tan": 82},
+          {"style": "先行", "results": "257-226-223-2006", "winRate": 9.5, "rentaiRate": 18.0, "placeRate": 26.0, "tan": 77},
+          {"style": "差し", "results": "157-186-188-2515", "winRate": 5.2, "rentaiRate": 11.0, "placeRate": 17.0, "tan": 55},
+          {"style": "追込", "results": "55-69-74-1390", "winRate": 3.5, "rentaiRate": 7.8, "placeRate": 12.0, "tan": 96}
         ]
       },
       "2400m": {
